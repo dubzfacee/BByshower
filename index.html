@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nataly Samantha</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;500&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- CUENTO INICIAL -->
+<div class="story-screen" id="story">
+  <div class="night-sky"></div>
+  <div class="story-text" id="storyText">
+    Había una vez…
+  </div>
+</div>
+
+<!-- INVITACION -->
+<div class="main hidden" id="mainContent">
+
+  <div class="card" id="card">
+
+    <h1>Una pequeña princesa está por llegar</h1>
+
+    <div class="name">Nataly Samantha</div>
+
+    <p>Domingo 22 de Marzo 2026 - 3:30 PM</p>
+
+    <p>Santa Ana Zegache</p>
+
+    <!-- FORMULARIO PRO -->
+    <form id="rsvpForm">
+      <input type="text" placeholder="Tu nombre" required id="nombre">
+      <input type="number" placeholder="¿Cuántas personas?" required id="personas">
+      <textarea placeholder="Mensaje bonito 💕" id="mensaje"></textarea>
+      <button type="submit">Confirmar Asistencia</button>
+    </form>
+
+    <div id="thanks" class="hidden">Gracias por confirmar 💕</div>
+
+  </div>
+
+</div>
+<button type="button" onclick="sendWhatsApp()">Confirmar por WhatsApp 💕</button>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+body{
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  overflow:hidden;
+}
+
+/* CIELO PASTEL ANIMADO */
+.story-screen{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(180deg,#1e1b4b,#312e81);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  color:white;
+  z-index:10;
+  transition:1.5s;
+}
+
+.night-sky{
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at top,#4338ca,#1e1b4b);
+  animation:skyMove 15s infinite alternate;
+}
+
+@keyframes skyMove{
+  from{transform:scale(1);}
+  to{transform:scale(1.1);}
+}
+
+.story-text{
+  font-size:28px;
+  z-index:2;
+  animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+.hidden{ display:none; }
+
+/* MAIN */
+
+.main{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#fde2f3,#e9d5ff,#dbeafe);
+  animation:skyPastel 10s infinite alternate;
+}
+
+@keyframes skyPastel{
+  from{background-position:0%}
+  to{background-position:100%}
+}
+
+.card{
+  backdrop-filter:blur(15px);
+  background:rgba(255,255,255,0.8);
+  border-radius:30px;
+  padding:40px;
+  text-align:center;
+  box-shadow:0 20px 60px rgba(0,0,0,.2);
+  border:2px solid rgba(255,255,255,.4);
+  transition:.2s;
+}
+
+/* PARALLAX 3D */
+.card:hover{
+  transform:rotateY(5deg) rotateX(5deg);
+}
+
+/* GLOW ROSA */
+.name{
+  font-family:'Great Vibes', cursive;
+  font-size:60px;
+  color:#ff4fa3;
+  text-shadow:0 0 10px #ff4fa3, 0 0 20px #ff4fa3;
+  animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:0 0 10px #ff4fa3;}
+  to{text-shadow:0 0 25px #ff4fa3;}
+}
+
+/* FORM */
+form{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+input, textarea{
+  padding:10px;
+  border-radius:10px;
+  border:none;
+}
+
+button{
+  padding:10px;
+  border:none;
+  border-radius:20px;
+  background:#ff4fa3;
+  color:white;
+  cursor:pointer;
+}
+
+/* PETALOS */
+.petal{
+  position:fixed;
+  width:20px;
+  height:20px;
+  background:pink;
+  border-radius:50%;
+  opacity:.6;
+  animation:fall 8s linear forwards;
+}
+
+@keyframes fall{
+  from{transform:translateY(-10vh);}
+  to{transform:translateY(110vh);}
+}
